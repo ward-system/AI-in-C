@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            background-color: black;
+        }
+
+        h1{
+            color: green;
+            font-family:'Times New Roman', Times, serif;
+        }
+
+        p{
+            color:white;
+            font-size: large;
+            font-family:'Times New Roman', Times, serif;
+        }
+
+        .FNames{
+            color: lightblue;
+        }
+    </style>
+</head>
+<body>
+    <h1>introduction</h1>
+    <p>AI-in-c is a machine learning framework for the C language. It is still in pre-release and you have to add some things manually like</p>
+    
+    <p>1. Your own training function</p>
+    <p>2. Your own cost function</p>
+    <p>3. Your own forward function</p>
+    <p>(or you can use the ones I defined in main.c)</p>
+
+    <p>but do not worry, in the next release I will add a unified library which will make the job reasy</p>
+    
+    <hr>
+    <h1>Neuron structure</h1>
+    <p>A single Neuron contains an array of weights and a single bias</p>
+    <p>You have to allocate the neuron before using it. You can use <span class="FNames">neuron_alloc</span> function for that</p>
+    <p>To get the output of a single neuron, you multiply the weights with input and add the bias to them. You can use the <span class="FNames">neuron_forward</span> function for that</p>
+    <p>For more efficiency, You have to randomize the weights and biases of your neuron. You can use <span class="FNames">neuron_rand</span> function for that</p>
+
+    <hr>
+    <h1>Layer structure</h1>
+    <p>A single Layer contains an array neurons</p>
+    <p>You have to allocate the Layer before using it. You can use <span class="FNames">layer_alloc</span> function for that</p>
+    <p>To add a neuron to a specific layer you can use <span class="FNames">layer_add_neuron</span> function</p>
+    <p>The output of a single layer is an array of all its neuron outputs. You can use the <span class="FNames">layer_forward</span> function for that</p>
+
+    <hr>
+    <h1>Note</h1>
+    <p>this is the first time I write a documentation so do not expect anything good from here. if you really want to understand how the program is written go read the code, it is not that big after all</p>
+
+</body>
+</html>
